@@ -5,7 +5,7 @@ import contactsInittialState from '../initialState/contactsInittialState';
 import auth from './auth';
 import contacts from './contacts';
 
-const GlobalContext = createContext({})
+export const GlobalContext = createContext({})
 
 
 const GlobalProviders= ({children}) => {
