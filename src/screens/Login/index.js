@@ -27,7 +27,11 @@ const Login = () => {
       icon={<Text>HIDE</Text>}
       iconPosition = "right"
       />
-      <CustomButton  secondary title="Submit"  loading={true} disabled={true}/>
+      <CustomButton  secondary  title="Submit"  loading={true} disabled={true}/>
+      <CustomButton  secondary  title="Submit"  loading={true} disabled={true}/>
+      <CustomButton  secondary  title="Submit"  loading={true} disabled={true}/>
+      <CustomButton  secondary  title="Submit"  loading={true} disabled={true}/>
+
     </Container>
   );
 };

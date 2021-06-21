@@ -5,13 +5,16 @@ import colors from '../../assets/theme/colors'
 
 import styles from './styles' 
 
-const CustomButton = ({title, secondary, primary, danger, disabled, loading, ...props}) => {
-const  [focused, setFocused] = useState(false)
+const CustomButton = ({title, secondary, primary, danger, disabled, loading, onPress, }) => {
+// const  [focused, setFocused] = useState(false)
 
 
 
 
   const getBgColor = () => {
+    if(disabled) {
+      return colors.grey
+    }
  if(primary) {
    return colors.primary
  }
@@ -28,9 +31,10 @@ const  [focused, setFocused] = useState(false)
     <TouchableOpacity 
 
     disabled={disabled}
+    onPress={onPress}
     
-    style={[styles.inputContainer, {backgroundColor:getBgColor()}]}>
-    {title && <Text>{title}</Text>}
+    style={[styles.wrapper, {backgroundColor:getBgColor()}]}>
+    {title && <Text style ={{color: disabled ? 'black' : colors.white}}>{title}</Text>}
 
     </TouchableOpacity>
   )
