@@ -49,6 +49,8 @@ const  [focused, setFocused] = useState(false)
       onBlur = {() => {
         setFocused(false);
       }}
+
+      {...props}
       />
     </View>
     {error && <Text style={styles.error}>{error}</Text>}
