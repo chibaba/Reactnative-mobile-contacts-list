@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View,TouchableOpacity, Text } from 'react-native'
+import { View,TouchableOpacity, Text, ActivityIndicator } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import colors from '../../assets/theme/colors'
 
@@ -34,7 +34,11 @@ const CustomButton = ({title, secondary, primary, danger, disabled, loading, onP
     onPress={onPress}
     
     style={[styles.wrapper, {backgroundColor:getBgColor()}]}>
-    {title && <Text style ={{color: disabled ? 'black' : colors.white}}>{title}</Text>}
+    <View style={[styles.loaderSection]}>
+    {loading && <ActivityIndicator color={primary ? colors.secondary :colors.primary}/>}
+
+    {title && <Text style ={{color: disabled ? 'black' : colors.white, paddingLeft: loading ?  5 : 0}}>{title}</Text>}
+    </View>
 
     </TouchableOpacity>
   )

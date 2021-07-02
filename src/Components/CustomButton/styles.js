@@ -8,9 +8,8 @@ export default StyleSheet.create({
      alignItems: "center",
      justifyContent: "space-evenly"
   },
-  inputContainer: {
-    paddingVertical: 12,
-
+  loaderSection: {
+    flexDirection: 'row'
   },
   textInput: {
     // backgroundColor: 'red',
